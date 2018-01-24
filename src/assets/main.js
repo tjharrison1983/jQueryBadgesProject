@@ -5,11 +5,25 @@ $(function() {
     dataType: 'jsonp',
     success: function (response) {
       //handle response
-      //console.log('response:', response);
-      addCourses(response.courses.completed)
+      console.log('response:', response);
+      addInProgress(response.courses.in_progress);
+      addCourses(response.courses.completed);
+      console.log('response:', response.badges);
+      //addGeneralBadges(response.badges)
     }
   });
 
+  function addGenBadges(genBadges) {
+
+
+
+  }
+
+  function addInProgress(courses) {
+
+    addCourses(courses);
+
+  }
 
   function addCourses(courses) {
 
